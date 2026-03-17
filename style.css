@@ -1,0 +1,436 @@
+* body {
+  font-family: "Inter", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container__nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+header {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: #020617;
+  border-bottom: 1px solid #94a3b8;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-top: solid 1px white;
+}
+
+.section h2 {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 35px;
+  color: #94a3b8;
+}
+
+.section__about {
+  display: flex;
+  flex-direction: row;
+  margin-top: 125px;
+  margin-bottom: 245px;
+  border-top: solid 1px white;
+}
+
+.section__about h2 {
+  font-size: 35px;
+}
+
+.about {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 80px;
+}
+
+.skill {
+  background: #1e293b;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #020617;
+  border: 2px solid #1e293b;
+  border-radius: 20px;
+  padding: 20px;
+  transition: 1.3s;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.tech {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact p {
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  border-top: 1px solid white;
+  margin-top: 60px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  background: #38bdf8;
+  color: #020617;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 85px;
+}
+
+.contacto h2 {
+  border-top: solid 1px white;
+  padding: 45px 0px;
+}
+/* Animaciones */
+
+/* Entrada nav y header */
+
+/* Animación general */
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px); /* empieza un poquito hacia arriba */
+    animation: fadeIn 0.6s forwards; /* forwards para mantener el estado final */
+}
+
+/* Keyframes de la animación */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Secuenciación con delay */
+.nav-logo { animation-delay: 0.2s; }
+.nav-link1 { animation-delay: 0.4s; }
+.nav-link2 { animation-delay: 0.6s; }
+.nav-link3 { animation-delay: 0.8s; }
+.nav-link4 { animation-delay: 1s; }
+
+.header-img { animation-delay: 1.2s; }
+.header-h1 { animation-delay: 1.4s; }
+.header-p1 { animation-delay: 1.6s; }
+.header-p2 { animation-delay: 1.8s; }
+.header-button { animation-delay: 2s; }
+
+/* Entrada Sobre Mi */
+
+/* Animaciones entrada lateral Sobre Mí */
+
+/* Texto y párrafos de la sección About */
+.container.about h2,
+.container.about p {
+    opacity: 0;
+    transform: translateX(-50px); /* empieza desde la izquierda */
+    transition: all 0.8s ease-out;
+}
+
+/* Imagen de la sección About */
+.img__about {
+    opacity: 0;
+    transform: translateX(50px); /* empieza desde la derecha */
+    transition: all 0.8s ease-out;
+}
+
+/* Clase visible activa la animación */
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/* Cuando se activa al hacer scroll */
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Cada párrafo también puede entrar desde la izquierda */
+.container.about p,
+.container.about h2 {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Cuando se activa */
+.container.about p.visible,
+.container.about h2.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Para espaciar el retraso entre párrafos */
+.container.about p {
+    transition-delay: 0s; /* se ajusta vía JS */
+}
+/* Keyframes para animación de entrada */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Delay para que entren en orden */
+.section__about .container.about {
+    animation-delay: 0.3s;
+}
+
+.section__about .img__about {
+    animation-delay: 0.6s;
+}
+
+/* Aumento de Skills Habilidades */
+
+/* Animación pulsante */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* se amplía al 120% */
+    }
+}
+
+
+
+
+
+.skill {
+  animation: bgLoop 2s infinite;
+    background: #1e293b;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px;
+    color: #94a3b8;
+    /* Animación pulsante */
+    animation: pulse 1.2s infinite;
+    border:solid 1px blue
+}
+@keyframes bgLoop {
+  0% { background-color: white; }
+  50% { background-color: #222; }
+  100% { background-color: white; }
+}
+
+/* Secuenciación: cada skill con retraso incremental */
+.skills .skill:nth-child(1) { animation-delay: 01s; }
+.skills .skill:nth-child(2) { animation-delay: 01.2s; }
+.skills .skill:nth-child(3) { animation-delay: 01.4s; }
+.skills .skill:nth-child(4) { animation-delay: 01.6s; }
+.skills .skill:nth-child(5) { animation-delay: 01.8s; }
+.skills .skill:nth-child(6) { animation-delay: 2s; }
+.skills .skill:nth-child(7) { animation-delay: 2.5s; }
+.skills .skill:nth-child(8) { animation-delay: 2.9s; }
+.skills .skill:nth-child(9) { animation-delay:3.6s; }
+.skills .skill:nth-child(10) { animation-delay: 4s; }
+
+/* Entrada cards */
+
+/* Contenedor de cada card */
+/* Card base */
+/* Card base */
+.card {
+    position: relative;
+    background: #020617;
+    border-radius: 20px;
+    border: 2px solid #1e293b;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; /* importante para el efecto */
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Pseudo-elemento que hace la “revelación” */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f172a; /* mismo color del fondo para cubrir */
+    transform: translateX(0); /* empieza cubriendo todo */
+    transition: transform 2.8s ease-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Cuando se activa la card */
+.card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* La pseudo capa se mueve hacia la derecha dejando ver el contenido */
+.card.visible::after {
+    transform: translateX(100%);
+}
+
+/*Entrada Contacto  */
+
+/* Base contacto */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #020617;
+    border-top: 2px solid #38bdf8;
+    overflow: hidden;
+}
+
+.contacto h2,
+.contacto p,
+.contacto a {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Clase visible activa la animación */
+.contacto.visible h2,
+.contacto.visible p,
+.contacto.visible a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pulsos suaves para enlaces */
+.contacto a {
+    display: inline-block;
+    color: #38bdf8;
+    font-weight: 600;
+    margin: 5px 0;
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+}
+
+.contacto a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #38bdf8;
+}
