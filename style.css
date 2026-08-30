@@ -94,6 +94,18 @@ h1, h2, h3 { line-height: 1.15; }
 footer { border-top: 1px solid rgba(148, 163, 184, .14); background: var(--bg-deep); color: var(--muted); }
 .footer-inner { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .footer-inner p { margin: 0; }
+.app-detail { min-height: calc(100vh - 72px); padding-block: clamp(56px, 9vw, 100px); }
+.app-detail-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(42px, 8vw, 90px); }
+.app-detail-image { overflow: hidden; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); }
+.app-detail-image img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.app-detail-copy h1 { margin-bottom: 22px; font-size: clamp(2.5rem, 6vw, 4.8rem); letter-spacing: -.05em; }
+.app-detail-copy > p:not(.section-label) { color: var(--muted); font-size: 1.05rem; }
+.app-feature-list { display: grid; gap: 12px; margin: 28px 0; padding: 0; list-style: none; }
+.app-feature-list li { position: relative; padding-left: 24px; color: var(--text); }
+.app-feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+.app-detail .project-tech { margin-bottom: 30px; }
+.app-detail-note { padding: 14px 16px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: rgba(56, 189, 248, .07); }
+.app-detail-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 .fade-in { animation: fade-in 700ms ease both; }
 .hero-copy.fade-in { animation-delay: 180ms; }
@@ -110,12 +122,13 @@ footer { border-top: 1px solid rgba(148, 163, 184, .14); background: var(--bg-de
   78% { border-color: rgba(56, 189, 248, .9); box-shadow: 0 0 0 1px rgba(56, 189, 248, .18), 0 8px 24px rgba(56, 189, 248, .16); }
 }
 @media (max-width: 800px) {
-  .about-grid, .contact-card { grid-template-columns: 1fr; }
+  .about-grid, .contact-card, .app-detail-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-block: 72px 90px; }
   .about-grid { gap: 44px; }
   .portrait-wrap { max-width: 480px; margin-inline: auto; }
   .projects-grid { grid-template-columns: 1fr; }
   .contact-card { gap: 30px; }
+  .app-detail-image { max-width: 620px; }
 }
 @media (max-width: 620px) {
   .section-container, .nav-container { width: min(calc(100% - 28px), var(--max-width)); }
