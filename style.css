@@ -98,6 +98,8 @@ footer { border-top: 1px solid rgba(148, 163, 184, .14); background: var(--bg-de
 .app-detail-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr); align-items: center; gap: clamp(36px, 6vw, 70px); }
 .app-detail-image { overflow: hidden; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); box-shadow: var(--shadow); }
 .app-detail-image img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; object-position: center; }
+.app-preview-page .app-detail-image { aspect-ratio: 4 / 3; }
+.app-preview-page .app-detail-image img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center; }
 .app-detail-copy h1 { margin-bottom: 22px; font-size: clamp(2.5rem, 6vw, 4.8rem); letter-spacing: -.05em; }
 .app-detail-copy > p:not(.section-label) { color: var(--muted); font-size: 1.05rem; }
 .app-feature-list { display: grid; gap: 12px; margin: 28px 0; padding: 0; list-style: none; }
